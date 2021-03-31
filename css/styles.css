@@ -21,12 +21,18 @@ body {
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  font-style: normal;
+  margin: 0px;
 }
 
-img {
-  display: block;
+/* img {
+  display: block; ----Репета на видео показывал что можно делать так в ДЗ))
   max-width: 100%;
-}
+} */
 /* можно еще создать в body {font size14px} */
 .link-line {
   text-decoration: none;
@@ -362,10 +368,11 @@ img {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 14px;
-  line-height: 24px;
+
   margin-top: 0;
   margin-bottom: 0;
   letter-spacing: 0.03em;
+  line-height: 1.6; /*Поставил 1,6 т/к 1,7 точно сюда не влазит/Может есть другой способ пожалуйста подскажите!!!*/
 }
 
 .text-footer {
@@ -383,6 +390,10 @@ img {
 }
 
 /* Страница портфолио */
+.pictblock {
+  display: block;
+  max-width: 100%;
+}
 
 .portfolio-title {
   margin-top: 0;
