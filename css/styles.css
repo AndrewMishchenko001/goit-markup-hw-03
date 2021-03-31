@@ -8,16 +8,16 @@
   --background-black: #2f303a;
   --background-button: #f5f4fa;
   --background-gray: #e5e5e5;
-  --bordercard-grey:#eeeeee;
+  --bordercard-grey: #eeeeee;
   --transparent-mail: rgba(255 255 255 0.6);
 
-  --card-set-gep: 30px
+  --card-set-gep: 30px;
 }
 
 /* Cтили для Index.html */
 
 body {
-  background-color: var(--background-gray);
+  background-color: var(--white-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
@@ -53,13 +53,12 @@ img {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
- 
 }
 
 /* Main */
-.main {
+.page-header > .container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -76,7 +75,7 @@ img {
 
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.17;
 }
 .logo-blue {
   color: var(--accent-color);
@@ -140,9 +139,15 @@ img {
 }
 
 /* Hero */
-.hero {
+.hero-section {
   background-color: var(--background-black);
   text-align: center;
+  max-width: 1600px;
+  height: 600px;
+
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .hero-title {
@@ -153,12 +158,15 @@ img {
   font-family: Roboto, sans-serif;
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
+  line-height: 1.363636;
 
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
- 
+  text-align: center;
+}
+.main-container {
+  max-width: 690px;
+  padding: 200px 0px;
 }
 
 /* features-list */
@@ -175,7 +183,7 @@ img {
 
 .features-title {
   margin-top: 0;
-  margin-bottom: 10;
+  margin-bottom: 10px;
 
   color: var(--title-text-color);
   font-family: Roboto, sans-serif;
@@ -228,7 +236,6 @@ img {
   text-align: center;
 }
 
-
 /* Section team */
 .team-list {
   display: flex;
@@ -242,6 +249,9 @@ img {
 .team-list .item {
   background-color: var(--background-white);
   width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team {
@@ -308,29 +318,34 @@ img {
   min-height: 50px;
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--white-color);
+  background-color: var(--accent-color);
 }
 
 /* footer */
 .page-footer {
   background-color: var(--background-black);
+
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Можно сделать display: flex */
-.page-footer .container {
- 
+.footer-conteiner {
+  display: block;
   padding-top: 60px;
   padding-bottom: 60px;
- 
 }
-
 .logo-footer {
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
-  
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.17;
+}
+.footer-adress {
+  display: block;
 }
 
 .logo-footer,
@@ -347,23 +362,24 @@ img {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 24px;
   margin-top: 0;
   margin-bottom: 0;
+  letter-spacing: 0.03em;
 }
+
 .text-footer {
   margin-top: 0;
   margin-bottom: 9px;
 }
 
-}
 .contacts-footer a:focus,
 .contacts-footer a:hover {
   color: var(--accent-color);
 }
-.contacts-footer .link:not(:last-child){
- margin-top: 0;
- margin-bottom: 9px;
+.contacts-footer .link:not(:last-child) {
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 
 /* Страница портфолио */
@@ -403,13 +419,13 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom:calc( -1 * var(--card-set-gep));
-  margin-right:calc( -1 * var(--card-set-gep));
+  margin-bottom: calc(-1 * var(--card-set-gep));
+  margin-right: calc(-1 * var(--card-set-gep));
 }
 
 /* Можно сделать через width */
 .flex-element {
-  flex-basis: calc(100% / 3 - 1 * var(--card-set-gep)) ;
+  flex-basis: calc(100% / 3 - 1 * var(--card-set-gep));
   margin-right: var(--card-set-gep);
   margin-bottom: var(--card-set-gep);
 }
@@ -418,15 +434,13 @@ img {
 }
 .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
-} 
-
+}
 
 .product-content {
   width: 370px;
   display: block;
   padding: 20px 24px;
   border-bottom: 1px solid var(--bordercard-grey);
-  border-left: 1px solid var(--bordercard-grey) ;
+  border-left: 1px solid var(--bordercard-grey);
   border-right: 1px solid var(--bordercard-grey);
-  }
-  
+}
